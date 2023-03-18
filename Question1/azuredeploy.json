@@ -1,0 +1,105 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.12.40.16777",
+      "templateHash": "16856611863128783179"
+    }
+  },
+  "parameters": {
+    "administratorLogin": {
+      "type": "string",
+      "metadata": {
+        "description": "The administrator username of the SQL logical server."
+      }
+    },
+    "administratorLoginPassword": {
+      "type": "secureString",
+      "metadata": {
+        "description": "The administrator password of the SQL logical server."
+      }
+    },
+    "adminUsername": {
+      "type": "string",
+      "metadata": {
+        "description": "Username for the Virtual Machine."
+      }
+    },
+    "adminPassword": {
+      "type": "securestring",
+      "minLength": 12,
+      "metadata": {
+        "description": "Password for the Virtual Machine."
+      }
+    },
+    "webAppName": {
+      "type": "string",
+      "defaultValue": "[format('webApp-{0}', uniqueString(resourceGroup().id))]",
+      "minLength": 2,
+      "metadata": {
+        "description": "Web app name."
+      }
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2021-04-01",
+      "name": "linkedTemplateVM",
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "https://raw.githubusercontent.com/subash544772/az-templates/main/Question1/WindowsVirtualMachine.json",
+          "contentVersion": "1.0.0.0"
+        },
+        "parameters": {
+          "adminUsername": {
+            "value": "[parameters('adminUsername')]"
+          },
+          "adminPassword": {
+            "value": "[parameters('adminPassword')]"
+          }
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2021-04-01",
+      "name": "linkedTemplatewebapp",
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "https://raw.githubusercontent.com/subash544772/az-templates/main/Question1/WebAppWindows.json",
+          "contentVersion": "1.0.0.0"
+        },
+        "parameters": {
+          "webAppName": {
+            "value": "[parameters('webAppName')]"
+          }
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2021-04-01",
+      "name": "linkedTemplatedb",
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "https://raw.githubusercontent.com/subash544772/az-templates/main/Question1/sql.json",
+          "contentVersion": "1.0.0.0"
+        },
+        "parameters": {
+          "administratorLogin": {
+            "value": "[parameters('administratorLogin')]"
+          },
+          "administratorLoginPassword": {
+            "value": "[parameters('administratorLoginPassword')]"
+          }
+        }
+      }
+    }
+  ]
+}
