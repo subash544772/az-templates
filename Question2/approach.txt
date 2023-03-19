@@ -1,0 +1,20 @@
+##Approach 1 ####
+Run the aure CLI commands to get the instance details in json format
+
+az vm get-instance-view -g delete -n simple-vm
+
+
+### Approach 2 ####
+
+az account get-access-token
+
+$headers = @{
+    Authorization="Bearer 53bUJXRHFHcXp6SjlzYW9NclZpQ21CRSIsInRpZCI6ImUwNzkzZDM5LTA5MzktNDk2ZC1iMTI5LTE5OGVkZDkxNmZlYiIsInVuaXF1ZV9uYW1lIjoic3ViYXNoLmMucHJhZGhhbkBhY2NlbnR1cmUuY29tIiwidXBuIjoic3ViYXNoLmMucHJhZGhhbkBhY2NlbnR1cmUuY29tIiwidXRpIjoiUnFReXpLZENORTJnMHZIY0RDUklBQSIsInZlciI6IjEuMCIsIndpZHMiOlsiYjc5ZmJmNGQtM2VmOS00Njg5LTgxNDMtNzZiMTk0ZTg1NTA5Il0sInhtc190Y2R0IjoxMzk2MDQ5MzY0fQ.gdG_axLqiiaYotMN7Dlix4LvHqNlk55FQjv5lVzMYh96M68wV1DKYr0J2-hxp7Q3HXH4oorBZficOFWGy3quPQt0itfsh--brWVXTicZbsw_VLkhLDObELy1_CDA-NUARGkKnvF81VpMAc-6Cml6DSzDP8ve2f4JJFaTpBYREGaym-7utOTpLXZ5nOKFye6GgQs-u9T_N-31gdjs01WYXBVS47fFCCgMwuPEk8ipffiAG8kPB-t9iZf5l0iuArc9P0EIvAMk1rnmQi59Ny9vdzrFp_j0zfDsQYdFoqDQ2JagF3aG6eCdandq24KbawM0fNPFhxpVTPhiOKILKVWgVQ"
+}
+Invoke-RestMethod -Headers $headers -Method Get -Uri https://management.azure.com/subscriptions/6d296be0-4236-4073-8420-3c1e0c459644/resourceGroups/delete/providers/Microsoft.Compute/virtualMachines/simple-vm/instanceView?api-version=2022-11-01
+
+
+####Approach 3 ####
+
+using the azure metadata service. 
+https://learn.microsoft.com/en-us/azure/virtual-machines/instance-metadata-service?tabs=windows
