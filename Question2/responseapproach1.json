@@ -1,0 +1,277 @@
+{
+  "additionalCapabilities": null,
+  "availabilitySet": null,
+  "billingProfile": null,
+  "diagnosticsProfile": {
+    "bootDiagnostics": {
+      "enabled": true,
+      "storageUri": "https://bootdiagsccdu33yvj445m.blob.core.windows.net/"
+    }
+  },
+  "evictionPolicy": null,
+  "extendedLocation": null,
+  "extensionsTimeBudget": null,
+  "hardwareProfile": {
+    "vmSize": "Standard_D2s_v5"
+  },
+  "host": null,
+  "hostGroup": null,
+  "id": "/subscriptions/6d296be0-4236-4073-8420-3c1e0c459644/resourceGroups/delete/providers/Microsoft.Compute/virtualMachines/simple-vm",
+  "identity": null,
+  "instanceView": {
+    "assignedHost": null,
+    "bootDiagnostics": {
+      "consoleScreenshotBlobUri": "https://bootdiagsccdu33yvj445m.blob.core.windows.net/bootdiagnostics-simplevm-e5348d72-257c-416a-97ad-cfe7580d77f1/simple-vm.e5348d72-257c-416a-97ad-cfe7580d77f1.screenshot.bmp",
+      "serialConsoleLogBlobUri": "https://bootdiagsccdu33yvj445m.blob.core.windows.net/bootdiagnostics-simplevm-e5348d72-257c-416a-97ad-cfe7580d77f1/simple-vm.e5348d72-257c-416a-97ad-cfe7580d77f1.serialconsole.log",
+      "status": null
+    },
+    "computerName": "simple-vm",
+    "disks": [
+      {
+        "encryptionSettings": null,
+        "name": "simple-vm_OsDisk_1_79f11bdb7dd141fca667266b9586b4c4",
+        "statuses": [
+          {
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Provisioning succeeded",
+            "level": "Info",
+            "message": null,
+            "time": "2023-03-19T08:35:37.968800+00:00"
+          }
+        ]
+      },
+      {
+        "encryptionSettings": null,
+        "name": "simple-vm_disk2_2e3cffb039d3436490c8e78e5e07700a",
+        "statuses": [
+          {
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Provisioning succeeded",
+            "level": "Info",
+            "message": null,
+            "time": "2023-03-19T08:35:37.968800+00:00"
+          }
+        ]
+      }
+    ],
+    "extensions": [
+      {
+        "name": "GuestAttestation",
+        "statuses": [
+          {
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Provisioning succeeded",
+            "level": "Info",
+            "message": "Enable operation succeeded",
+            "time": null
+          }
+        ],
+        "substatuses": [
+          {
+            "code": "ComponentStatus/GuestAttestation/succeeded",
+            "displayStatus": "Provisioning succeeded",
+            "level": "Info",
+            "message": "Successfully completed guest attestation",
+            "time": null
+          },
+          {
+            "code": "ComponentStatus/ReportHealth/succeeded",
+            "displayStatus": "Provisioning succeeded",
+            "level": "Info",
+            "message": "Successfully reported health to ASC shim",
+            "time": null
+          }
+        ],
+        "type": "Microsoft.Azure.Security.WindowsAttestation.GuestAttestation",
+        "typeHandlerVersion": "1.0.1.22"
+      }
+    ],
+    "hyperVGeneration": "V2",
+    "maintenanceRedeployStatus": null,
+    "osName": "Windows Server 2022 Datacenter Azure Edition",
+    "osVersion": "10.0.20348.1607",
+    "patchStatus": null,
+    "platformFaultDomain": null,
+    "platformUpdateDomain": null,
+    "rdpThumbPrint": null,
+    "statuses": [
+      {
+        "code": "ProvisioningState/succeeded",
+        "displayStatus": "Provisioning succeeded",
+        "level": "Info",
+        "message": null,
+        "time": "2023-03-19T08:37:15.609717+00:00"
+      },
+      {
+        "code": "PowerState/running",
+        "displayStatus": "VM running",
+        "level": "Info",
+        "message": null,
+        "time": null
+      }
+    ],
+    "vmAgent": {
+      "extensionHandlers": [
+        {
+          "status": {
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Ready",
+            "level": "Info",
+            "message": null,
+            "time": null
+          },
+          "type": "Microsoft.Azure.Security.WindowsAttestation.GuestAttestation",
+          "typeHandlerVersion": "1.0.1.22"
+        }
+      ],
+      "statuses": [
+        {
+          "code": "ProvisioningState/succeeded",
+          "displayStatus": "Ready",
+          "level": "Info",
+          "message": "GuestAgent is running and processing the extensions.",
+          "time": "2023-03-19T10:59:19.009000+00:00"
+        }
+      ],
+      "vmAgentVersion": "2.7.41491.1075"
+    },
+    "vmHealth": null
+  },
+  "licenseType": null,
+  "location": "uksouth",
+  "name": "simple-vm",
+  "networkProfile": {
+    "networkApiVersion": null,
+    "networkInterfaceConfigurations": null,
+    "networkInterfaces": [
+      {
+        "deleteOption": null,
+        "id": "/subscriptions/6d296be0-4236-4073-8420-3c1e0c459644/resourceGroups/delete/providers/Microsoft.Network/networkInterfaces/myVMNic",
+        "primary": null,
+        "resourceGroup": "delete"
+      }
+    ]
+  },
+  "osProfile": {
+    "adminPassword": null,
+    "adminUsername": "GEN-UNIQUE",
+    "allowExtensionOperations": true,
+    "computerName": "simple-vm",
+    "customData": null,
+    "linuxConfiguration": null,
+    "requireGuestProvisionSignal": true,
+    "secrets": [],
+    "windowsConfiguration": {
+      "additionalUnattendContent": null,
+      "enableAutomaticUpdates": true,
+      "patchSettings": {
+        "assessmentMode": "ImageDefault",
+        "enableHotpatching": null,
+        "patchMode": "AutomaticByOS"
+      },
+      "provisionVmAgent": true,
+      "timeZone": null,
+      "winRm": null
+    }
+  },
+  "plan": null,
+  "platformFaultDomain": null,
+  "priority": null,
+  "provisioningState": "Succeeded",
+  "proximityPlacementGroup": null,
+  "resourceGroup": "delete",
+  "resources": [
+    {
+      "autoUpgradeMinorVersion": true,
+      "enableAutomaticUpgrade": null,
+      "forceUpdateTag": null,
+      "id": "/subscriptions/6d296be0-4236-4073-8420-3c1e0c459644/resourceGroups/delete/providers/Microsoft.Compute/virtualMachines/simple-vm/extensions/GuestAttestation",
+      "instanceView": null,
+      "location": "uksouth",
+      "name": "GuestAttestation",
+      "protectedSettings": null,
+      "provisioningState": "Succeeded",
+      "publisher": "Microsoft.Azure.Security.WindowsAttestation",
+      "resourceGroup": "delete",
+      "settings": {
+        "AttestationConfig": {
+          "MaaSettings": {
+            "maaEndpoint": "",
+            "maaTenantName": "GuestAttestation"
+          }
+        }
+      },
+      "tags": null,
+      "type": "Microsoft.Compute/virtualMachines/extensions",
+      "typeHandlerVersion": "1.0",
+      "typePropertiesType": "GuestAttestation"
+    }
+  ],
+  "scheduledEventsProfile": null,
+  "securityProfile": {
+    "encryptionAtHost": null,
+    "securityType": "TrustedLaunch",
+    "uefiSettings": {
+      "secureBootEnabled": true,
+      "vTpmEnabled": true
+    }
+  },
+  "storageProfile": {
+    "dataDisks": [
+      {
+        "caching": "None",
+        "createOption": "Empty",
+        "deleteOption": "Detach",
+        "detachOption": null,
+        "diskIopsReadWrite": null,
+        "diskMBpsReadWrite": null,
+        "diskSizeGb": 1023,
+        "image": null,
+        "lun": 0,
+        "managedDisk": {
+          "diskEncryptionSet": null,
+          "id": "/subscriptions/6d296be0-4236-4073-8420-3c1e0c459644/resourceGroups/delete/providers/Microsoft.Compute/disks/simple-vm_disk2_2e3cffb039d3436490c8e78e5e07700a",
+          "resourceGroup": "delete",
+          "storageAccountType": "Premium_LRS"
+        },
+        "name": "simple-vm_disk2_2e3cffb039d3436490c8e78e5e07700a",
+        "toBeDetached": false,
+        "vhd": null,
+        "writeAcceleratorEnabled": null
+      }
+    ],
+    "imageReference": {
+      "exactVersion": "20348.1607.230310",
+      "id": null,
+      "offer": "WindowsServer",
+      "publisher": "MicrosoftWindowsServer",
+      "sku": "2022-datacenter-azure-edition",
+      "version": "latest"
+    },
+    "osDisk": {
+      "caching": "ReadWrite",
+      "createOption": "FromImage",
+      "deleteOption": "Detach",
+      "diffDiskSettings": null,
+      "diskSizeGb": 127,
+      "encryptionSettings": null,
+      "image": null,
+      "managedDisk": {
+        "diskEncryptionSet": null,
+        "id": "/subscriptions/6d296be0-4236-4073-8420-3c1e0c459644/resourceGroups/delete/providers/Microsoft.Compute/disks/simple-vm_OsDisk_1_79f11bdb7dd141fca667266b9586b4c4",
+        "resourceGroup": "delete",
+        "storageAccountType": "StandardSSD_LRS"
+      },
+      "name": "simple-vm_OsDisk_1_79f11bdb7dd141fca667266b9586b4c4",
+      "osType": "Windows",
+      "vhd": null,
+      "writeAcceleratorEnabled": null
+    }
+  },
+  "tags": null,
+  "type": "Microsoft.Compute/virtualMachines",
+  "userData": null,
+  "virtualMachineScaleSet": null,
+  "vmId": "e5348d72-257c-416a-97ad-cfe7580d77f1",
+  "zones": null
+}
