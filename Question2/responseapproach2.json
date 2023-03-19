@@ -1,0 +1,51 @@
+{
+    "computerName":  "simple-vm",
+    "osName":  "Windows Server 2022 Datacenter Azure Edition",
+    "osVersion":  "10.0.20348.1607",
+    "vmAgent":  {
+                    "vmAgentVersion":  "2.7.41491.1075",
+                    "statuses":  [
+                                     "@{code=ProvisioningState/succeeded; level=Info; displayStatus=Ready; message=GuestAgent is running and processing the extensions.; time=2023-03-19T11:04:19.244+00:00}"
+                                 ],
+                    "extensionHandlers":  [
+                                              "@{type=Microsoft.Azure.Security.WindowsAttestation.GuestAttestation; typeHandlerVersion=1.0.1.22; status=}"
+                                          ]
+                },
+    "disks":  [
+                  {
+                      "name":  "simple-vm_OsDisk_1_79f11bdb7dd141fca667266b9586b4c4",
+                      "statuses":  ""
+                  },
+                  {
+                      "name":  "simple-vm_disk2_2e3cffb039d3436490c8e78e5e07700a",
+                      "statuses":  ""
+                  }
+              ],
+    "bootDiagnostics":  {
+                            "consoleScreenshotBlobUri":  "https://bootdiagsccdu33yvj445m.blob.core.windows.net/bootdiagnostics-simplevm-e5348d72-257c-416a-97ad-cfe7580d77f1/simple-vm.e5348d72-257c-416a-97ad-cfe7580d77f1.screenshot.bmp",
+                            "serialConsoleLogBlobUri":  "https://bootdiagsccdu33yvj445m.blob.core.windows.net/bootdiagnostics-simplevm-e5348d72-257c-416a-97ad-cfe7580d77f1/simple-vm.e5348d72-257c-416a-97ad-cfe7580d77f1.serialconsole.log"
+                        },
+    "extensions":  [
+                       {
+                           "name":  "GuestAttestation",
+                           "type":  "Microsoft.Azure.Security.WindowsAttestation.GuestAttestation",
+                           "typeHandlerVersion":  "1.0.1.22",
+                           "substatuses":  " ",
+                           "statuses":  ""
+                       }
+                   ],
+    "hyperVGeneration":  "V2",
+    "statuses":  [
+                     {
+                         "code":  "ProvisioningState/succeeded",
+                         "level":  "Info",
+                         "displayStatus":  "Provisioning succeeded",
+                         "time":  "2023-03-19T08:37:15.6097179+00:00"
+                     },
+                     {
+                         "code":  "PowerState/running",
+                         "level":  "Info",
+                         "displayStatus":  "VM running"
+                     }
+                 ]
+}
